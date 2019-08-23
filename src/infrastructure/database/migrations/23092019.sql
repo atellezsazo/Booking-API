@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.17, for macos10.14 (x86_64)
+--
+-- Host: localhost    Database: bookings
+-- ------------------------------------------------------
+-- Server version	5.7.25
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Booking`
+--
+
+DROP TABLE IF EXISTS `Booking`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Booking` (
+  `id` char(36) NOT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `createdAt` datetime DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Booking`
+--
+
+LOCK TABLES `Booking` WRITE;
+/*!40000 ALTER TABLE `Booking` DISABLE KEYS */;
+INSERT INTO `Booking` VALUES ('83c5a53d-a707-447f-8165-12dc540dbe2f','unconfirmed','2019-09-23 20:43:51',NULL),('d70d708b-d8a9-4814-b593-cbf764eb2f13','confirmed','2019-09-22 20:43:51',NULL),('f401e321-9481-41c6-91a0-1a454282de29','confirmed','2019-09-23 20:43:51',NULL);
+/*!40000 ALTER TABLE `Booking` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-08-24  0:25:42
