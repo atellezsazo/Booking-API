@@ -12,7 +12,7 @@ const getConfirmedBookings = async () => {
 
     return {
       code: httpStatus.OK,
-      data: bookings
+      data: { bookings }
     }
 
   } catch (err) {

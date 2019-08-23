@@ -10,7 +10,5 @@ exports.BookingEntity = attributes({
     required: true,
   },
 })(class BookingEntity {
-  setImage(image) {
-    this.image = image;
-  }
+
 });

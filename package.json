@@ -6,14 +6,20 @@
   "scripts": {
     "start": "node index.js",
     "start-dev": "nodemon -r dotenv/config index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -b -R spec specs/**/*.spec.js --exit",
+    "coverage": "nyc mocha -b -R spec specs/**/*.spec.js --exit",
+    "lint": "eslint -c .eslintrc.js \"**/*.js\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.2.0",
     "dotenv": "^8.1.0",
     "eslint": "^6.2.1",
-    "nodemon": "^1.19.1"
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -24,5 +30,17 @@
     "sequelize": "5.7.0",
     "sequelize-cli": "5.5.0",
     "structure": "^1.5.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "specs/**/*.spec.js",
+      "src/API/server.js"
+    ],
+    "all": true
   }
 }

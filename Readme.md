@@ -34,7 +34,36 @@ Explanation to how to prepare the environment for automated tests for this APIs.
 npm test
 ```
 
+#### And coding styles test
 
+```
+npm run lint
+```
+
+#### Test Coverage
+
+```
+npm run coverage
+```
+
+```
+--------------------------------|----------|----------|----------|----------|-------------------|
+File                            |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+--------------------------------|----------|----------|----------|----------|-------------------|
+All files                       |    92.45 |    66.67 |      100 |    92.31 |                   |
+ API/uses_cases                 |    85.71 |       50 |      100 |    85.71 |                   |
+  list_bookings.js              |    85.71 |       50 |      100 |    85.71 |              8,19 |
+ domain/entities                |      100 |      100 |      100 |      100 |                   |
+  booking.js                    |      100 |      100 |      100 |      100 |                   |
+ domain/repository              |    93.33 |       50 |      100 |    92.86 |                   |
+  bookings.js                   |    93.33 |       50 |      100 |    92.86 |                18 |
+ infrastructure/database        |      100 |      100 |      100 |      100 |                   |
+  index.js                      |      100 |      100 |      100 |      100 |                   |
+ infrastructure/database/models |       95 |       80 |      100 |       95 |                   |
+  bookings.js                   |      100 |      100 |      100 |      100 |                   |
+  index.js                      |    94.12 |       80 |      100 |    94.12 |                23 |
+--------------------------------|----------|----------|----------|----------|-------------------|
+```
 
 ## Deployment
 

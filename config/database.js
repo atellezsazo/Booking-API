@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const Sequalize = require('sequelize');
 
 exports.connection = () => (
